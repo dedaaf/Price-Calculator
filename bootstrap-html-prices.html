@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-css-prices.css">
+  <link rel="stylesheet" href="bootstrap-switch.css">
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="bootstrap-js-prices.js"></script>
+  <script src="bootstrap-switch.js"></script>
+
+  <title>Online Price Calculator PlanningPME</title>
+</head>
+<body>
+
+
+<div class="container prijsonline">
+  	<div class="row 1">
+  		<div class="col-md-4 col-xs-12">
+  			<h5>PlanningPME Eerste licentie</h5>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<input type="checkbox" class="form-control berekening" name="eerstePME" id="eerstePME" data-on-text="Ja" data-off-text="Nee">
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<div class="input-group">
+  				<span class="input-group-addon">€</span>
+  				<input type="text" class="form-control pmeprijzen" id="eerstePrijs" name="eerstePrijs" value="0" readonly >
+  			</div>
+  		</div>
+  	</div>
+  	<div class="row 2">
+  		<div class="col-md-4 col-xs-12">
+  			<h5>PlanningPME Extra licentie</h5>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<input type="number" class="form-control berekening" name="numberExtraPME" id="numberExtraPME" style="display:inline;" value="0">
+        <div class="label label-default" style="background-color: #eee; color:#555; font-size: 10px;" >€ <span id="extraPME_prijsperstuk" ></span> per stuk</div>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<div class="input-group">
+  				<span class="input-group-addon">€</span>
+  				<input type="text" class="form-control pmeprijzen" id="extraPrijs" name="extraPrijs" value="0" readonly>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="row 3">
+  		<div class="col-md-4 col-xs-12">
+  			<h5>PlanningPME Viewer licentie</h5>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<input type="number" class="form-control berekening" name="number_viewerPME" id="number_viewerPME"  style="display:inline;" value="0">
+        <div class="label label-default" style="background-color: #eee; color:#555; font-size: 10px;" >€ <span id="priceViewer_prijsperstuk" ></span> per stuk</div>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<div class="input-group">
+  				<span class="input-group-addon">€</span>
+  				<input type="text" class="form-control pmeprijzen" id="viewerPrijs" name="viewerPrijs" value="0" readonly>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="row 4">
+  		<div class="col-md-4 col-xs-12">
+  			<h5>PlanningPME Mobile licentie</h5>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<input type="number" class="form-control berekening" name="mobilePME" id="mobilePME" style="display:inline;" >
+        <div class="label label-default" style="background-color: #eee; color:#555; font-size: 10px;" ><span id="pricemobile_prijsperstuk" ></span>prijs is per device per jaar</div>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<div class="input-group">
+  				<span class="input-group-addon">€</span>
+  				<input type="text" class="form-control pmeprijzen" id="mobielePrijs" name="mobielePrijs" value="0" readonly>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="row 5">
+	  	<div class="col-md-4 col-xs-12">
+	  		<h5>PlanningPME WebAccess</h5>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<input type="number" class="form-control berekening" name="amountResourcesWeb" id="amountResourcesWeb" style="display:inline;">
+        <div class="label label-default" style="background-color: #eee; color:#555; font-size: 10px;">aantal <span id="resource_bereik" ></span> resources</div>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<div class="input-group">
+  				<span class="input-group-addon">€</span>
+  				<input type="text" class="form-control pmeprijzen" id="webPrijs" name="webPrijs" value="0" readonly>
+  			</div>
+  		</div>
+  	</div>
+    <div class="col-md-12" hidden>
+    </div>
+  	<div class="row 6">
+  		<div class="col-md-4 col-xs-12">
+  			<h5>PlanningPME HTML licentie</h5>
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<input type="checkbox" class="form-control berekening" name="htmlPME" id="htmlPME" data-on-text="Ja" data-off-text="Nee">
+  		</div>
+  		<div class="col-md-4 col-xs-6">
+  			<div class="input-group">
+  				<span class="input-group-addon">€</span>
+  				<input type="text" class="form-control pmeprijzen" id="htmlPrijs" name="htmlPrijs" value="0" readonly>
+  			</div>
+  		</div>
+  	</div>
+    <div class="row 7">
+      <div class="col-md-4 col-xs-12">
+        <h5>Wilt u een Cloud Oplossing?</h5>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <input type="checkbox" class="form-control berekening" name="cloud" id="cloud" data-on-text="Ja" data-off-text="Nee">
+      </div>
+    </div>
+  	<div class="row" id="totals">
+      <div class="col-xs-12 col-md-12 "> <!-- Start row for the totals here -->
+        <div class="input-group">
+          <span class="input-group-addon total">Subtotaal prijs</span>
+          <span class="input-group-addon">€</span>
+          <input type="text" class="form-control pmeprijzen" id="subtotalprijs" value="0" readonly>
+        </div><!-- /input-group -->
+      </div>
+      <div class="col-xs-12 col-md-12 ">
+        <div class="input-group">
+          <span class="input-group-addon total">Support prijs</span>
+          <span class="input-group-addon">€</span>
+          <input type="text" class="form-control pmeprijzen" id="supportPrijs" value="0" readonly>
+        </div><!-- /input-group -->
+      </div>
+      <div class="col-xs-12 col-md-12 ">
+        <div class="input-group">
+          <span class="input-group-addon total">Totaal prijs</span>
+          <span class="input-group-addon">€</span>
+          <strong><input type="text" class="form-control pmeprijzen" id="totaalprijs" value="0" readonly></strong>
+        </div><!-- /input-group -->
+      </div>
+    </div><!-- /row totals -->
+</div><!-- containter -->
+
+</body>
+</html>
